@@ -296,7 +296,7 @@ statYear options: "2026", "2025", or "avg"
 tier options: "HIGH" (65%+), "MEDIUM" (58-64%), "LOW" (below 58%)
 Include every game. Rank by prob descending.`;
 
-  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+const resp = await fetch("/api/picks", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
